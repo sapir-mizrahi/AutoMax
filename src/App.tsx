@@ -46,21 +46,21 @@ function App() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-lg">
-                <Zap className="h-8 w-8 text-white" />
+              <div className="bg-gray-300 p-2 rounded-lg">
+                <img src="/image (2).png" alt="Auto Max Logo" className="h-8 w-8" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Auto Max</h1>
-                <p className="text-sm text-blue-600 font-medium">ממקסמים את העסק באוטומט</p>
+                <p className="text-sm font-medium" style={{color: '#153969'}}>ממקסמים את העסק באוטומט</p>
               </div>
             </div>
 
             {/* Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">בית</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">שירותים</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">המלצות</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">צור קשר</a>
+              <a href="#home" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>בית</a>
+              <a href="#services" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>שירותים</a>
+              <a href="#testimonials" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>המלצות</a>
+              <a href="#contact" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>צור קשר</a>
             </nav>
 
             {/* Mobile menu button */}
@@ -77,33 +77,42 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block px-3 py-2 text-gray-700 hover:text-blue-600">בית</a>
-              <a href="#services" className="block px-3 py-2 text-gray-700 hover:text-blue-600">שירותים</a>
-              <a href="#testimonials" className="block px-3 py-2 text-gray-700 hover:text-blue-600">המלצות</a>
-              <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600">צור קשר</a>
+              <a href="#home" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>בית</a>
+              <a href="#services" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>שירותים</a>
+              <a href="#testimonials" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>המלצות</a>
+              <a href="#contact" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>צור קשר</a>
             </div>
           </div>
         )}
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+      <section id="home" className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="absolute inset-0 opacity-10">
+            <img 
+              src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+              alt="Automation Background" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center relative z-10">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               ממקסמים את העסק שלכם
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"> באוטומט</span>
+              <span className="bg-gradient-to-r bg-clip-text text-transparent" style={{backgroundImage: `linear-gradient(to right, #FF66C4, #153969)`}}> באוטומט</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               פתרונות אוטומציה עסקית מתקדמים, בניית מערכות CRM מותאמות אישית וייעול תהליכים 
               שיחסכו לכם זמן וכסף ויגדילו את הרווחיות
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#153969', '&:hover': {backgroundColor: '#0f2a4f'}}}>
                 התחל עכשיו
                 <ArrowRight className="inline h-5 w-5 mr-2" />
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+              <button className="border-2 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300" style={{borderColor: '#FF66C4', color: '#FF66C4', '&:hover': {backgroundColor: '#FF66C4', color: 'white'}}}>
                 לפגישת ייעוץ חינם
               </button>
             </div>
@@ -124,8 +133,8 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* CRM Systems */}
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4">
-                <Users className="h-8 w-8 text-blue-600" />
+              <div className="p-3 rounded-lg w-fit mb-4" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
+                <Users className="h-8 w-8" style={{color: '#FF66C4'}} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">מערכות CRM</h3>
               <p className="text-gray-600 mb-4">
@@ -149,8 +158,8 @@ function App() {
 
             {/* Business Automation */}
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-green-100 p-3 rounded-lg w-fit mb-4">
-                <Settings className="h-8 w-8 text-green-600" />
+              <div className="p-3 rounded-lg w-fit mb-4" style={{backgroundColor: '#153969', opacity: 0.1}}>
+                <Settings className="h-8 w-8" style={{color: '#153969'}} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">אוטומציה עסקית</h3>
               <p className="text-gray-600 mb-4">
@@ -174,8 +183,8 @@ function App() {
 
             {/* Analytics & Reports */}
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="bg-purple-100 p-3 rounded-lg w-fit mb-4">
-                <BarChart3 className="h-8 w-8 text-purple-600" />
+              <div className="p-3 rounded-lg w-fit mb-4" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
+                <BarChart3 className="h-8 w-8" style={{color: '#FF66C4'}} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">ניתוח נתונים</h3>
               <p className="text-gray-600 mb-4">
@@ -222,7 +231,7 @@ function App() {
                 "Auto Max שינתה לנו את המשחק לחלוטין. המערכת שבנו עזרה לנו להגדיל את המכירות ב-40% תוך שלושה חודשים."
               </p>
               <div className="flex items-center">
-                <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold">
+                <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundColor: '#153969'}}>
                   ח.כ
                 </div>
                 <div className="mr-4">
@@ -243,7 +252,7 @@ function App() {
                 "הפתרון שקיבלנו חוסך לנו שעות של עבודה כל יום. הצוות מקצועי ותמיד זמין לתמיכה."
               </p>
               <div className="flex items-center">
-                <div className="bg-green-500 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold">
+                <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundColor: '#FF66C4'}}>
                   ט.ס
                 </div>
                 <div className="mr-4">
@@ -264,7 +273,7 @@ function App() {
                 "המערכת פשוט מושלמת. כל מה שצריך במקום אחד, קל לשימוש ותוצאות מדהימות."
               </p>
               <div className="flex items-center">
-                <div className="bg-purple-500 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold">
+                <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundColor: '#153969'}}>
                   מ.ל
                 </div>
                 <div className="mr-4">
@@ -293,8 +302,8 @@ function App() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">פרטי התקשרות</h3>
               
               <div className="flex items-center space-x-4">
-                <div className="bg-blue-100 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-blue-600" />
+                <div className="p-3 rounded-lg" style={{backgroundColor: '#153969', opacity: 0.1}}>
+                  <Phone className="h-6 w-6" style={{color: '#153969'}} />
                 </div>
                 <div className="mr-4">
                   <h4 className="font-semibold text-gray-900">טלפון</h4>
@@ -303,8 +312,8 @@ function App() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="bg-green-100 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-green-600" />
+                <div className="p-3 rounded-lg" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
+                  <Mail className="h-6 w-6" style={{color: '#FF66C4'}} />
                 </div>
                 <div className="mr-4">
                   <h4 className="font-semibold text-gray-900">אימייל</h4>
@@ -313,8 +322,8 @@ function App() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="bg-purple-100 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-purple-600" />
+                <div className="p-3 rounded-lg" style={{backgroundColor: '#153969', opacity: 0.1}}>
+                  <MapPin className="h-6 w-6" style={{color: '#153969'}} />
                 </div>
                 <div className="mr-4">
                   <h4 className="font-semibold text-gray-900">כתובת</h4>
@@ -324,7 +333,7 @@ function App() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+            <div className="p-8 rounded-xl" style={{background: 'linear-gradient(to bottom right, rgba(255, 102, 196, 0.1), rgba(21, 57, 105, 0.1))'}}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -337,7 +346,8 @@ function App() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
+                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
                       required
                     />
                   </div>
@@ -351,7 +361,8 @@ function App() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
+                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
                       required
                     />
                   </div>
@@ -368,7 +379,8 @@ function App() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
+                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
                     />
                   </div>
                   <div>
@@ -381,7 +393,8 @@ function App() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
+                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
                     />
                   </div>
                 </div>
@@ -396,14 +409,16 @@ function App() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all resize-none"
+                    style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
                     placeholder="ספרו לנו על העסק שלכם והאתגרים שאתם מתמודדים איתם..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="w-full text-white py-4 px-6 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  style={{background: `linear-gradient(to right, #FF66C4, #153969)`, '&:hover': {opacity: 0.9}}}
                 >
                   שלח פנייה
                   <ArrowRight className="inline h-5 w-5 mr-2" />
@@ -420,12 +435,12 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-lg">
-                  <Zap className="h-6 w-6 text-white" />
+                <div className="bg-gray-300 p-2 rounded-lg">
+                  <img src="/image (2).png" alt="Auto Max Logo" className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Auto Max</h3>
-                  <p className="text-sm text-blue-400">ממקסמים את העסק באוטומט</p>
+                  <p className="text-sm" style={{color: '#FF66C4'}}>ממקסמים את העסק באוטומט</p>
                 </div>
               </div>
               <p className="text-gray-400">
