@@ -92,7 +92,7 @@ function App() {
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               ממקסמים את העסק שלכם
-              <span className="text-blue-600"> באוטומט</span>
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"> באוטומט</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               פתרונות אוטומציה עסקית מתקדמים, בניית מערכות CRM מותאמות אישית וייעול תהליכים 
