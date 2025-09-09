@@ -8,10 +8,14 @@ import {
   Settings, 
   Star, 
   ArrowRight,
+  ArrowLeft,
   CheckCircle,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Database,
+  Cog,
+  TrendingUp
 } from 'lucide-react';
 
 function App() {
@@ -57,10 +61,10 @@ function App() {
 
             {/* Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>בית</a>
-              <a href="#services" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>שירותים</a>
-              <a href="#testimonials" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>המלצות</a>
-              <a href="#contact" className="text-gray-700 transition-colors" style={{'&:hover': {color: '#153969'}}}>צור קשר</a>
+              <a href="#home" className="text-gray-700 hover:text-[#153969] transition-colors">בית</a>
+              <a href="#services" className="text-gray-700 hover:text-[#153969] transition-colors">שירותים</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-[#153969] transition-colors">המלצות</a>
+              <a href="#contact" className="text-gray-700 hover:text-[#153969] transition-colors">צור קשר</a>
             </nav>
 
             {/* Mobile menu button */}
@@ -77,10 +81,10 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>בית</a>
-              <a href="#services" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>שירותים</a>
-              <a href="#testimonials" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>המלצות</a>
-              <a href="#contact" className="block px-3 py-2 text-gray-700" style={{'&:hover': {color: '#153969'}}}>צור קשר</a>
+              <a href="#home" className="block px-3 py-2 text-gray-700 hover:text-[#153969]">בית</a>
+              <a href="#services" className="block px-3 py-2 text-gray-700 hover:text-[#153969]">שירותים</a>
+              <a href="#testimonials" className="block px-3 py-2 text-gray-700 hover:text-[#153969]">המלצות</a>
+              <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-[#153969]">צור קשר</a>
             </div>
           </div>
         )}
@@ -103,18 +107,18 @@ function App() {
               ממקסמים את העסק שלכם
               <span className="bg-gradient-to-r bg-clip-text text-transparent" style={{backgroundImage: `linear-gradient(to right, #FF66C4, #153969)`}}> באוטומט</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto" style={{direction: 'rtl'}}>
               פתרונות אוטומציה עסקית מתקדמים, בניית מערכות CRM מותאמות אישית וייעול תהליכים 
               שיחסכו לכם זמן וכסף ויגדילו את הרווחיות
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#153969', '&:hover': {backgroundColor: '#0f2a4f'}}}>
+              <button className="bg-[#153969] hover:bg-[#0f2a4f] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                <ArrowLeft className="inline h-5 w-5 mr-2" />
                 התחל עכשיו
-                <ArrowRight className="inline h-5 w-5 mr-2" />
               </button>
-              <button className="border-2 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300" style={{borderColor: '#FF66C4', color: '#FF66C4', '&:hover': {backgroundColor: '#FF66C4', color: 'white'}}}>
+              <a href="#contact" className="border-2 border-[#FF66C4] text-[#FF66C4] hover:bg-[#FF66C4] hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
                 לפגישת ייעוץ חינם
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -132,11 +136,11 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* CRM Systems */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" style={{direction: 'rtl', textAlign: 'right'}}>
               <div className="p-3 rounded-lg w-fit mb-4" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
-                <Users className="h-8 w-8" style={{color: '#FF66C4'}} />
+                <Database className="h-8 w-8 text-[#FF66C4] fill-current" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">מערכות CRM</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4" style={{direction: 'rtl', textAlign: 'right'}}>מערכות CRM</h3>
               <p className="text-gray-600 mb-4">
                 בניית מערכות ניהול לקוחות מותאמות אישית לעסק שלכם. ניהול מכירות, מעקב אחר לידים וניתוח נתוני לקוחות
               </p>
@@ -157,9 +161,9 @@ function App() {
             </div>
 
             {/* Business Automation */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div style={{direction: 'rtl', textAlign: 'right'}} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="p-3 rounded-lg w-fit mb-4" style={{backgroundColor: '#153969', opacity: 0.1}}>
-                <Settings className="h-8 w-8" style={{color: '#153969'}} />
+                <Cog className="h-8 w-8 text-[#153969] fill-current" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">אוטומציה עסקית</h3>
               <p className="text-gray-600 mb-4">
@@ -182,9 +186,9 @@ function App() {
             </div>
 
             {/* Analytics & Reports */}
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div style={{direction: 'rtl', textAlign: 'right'}} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="p-3 rounded-lg w-fit mb-4" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
-                <BarChart3 className="h-8 w-8" style={{color: '#FF66C4'}} />
+                <TrendingUp className="h-8 w-8 text-[#FF66C4] fill-current" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">ניתוח נתונים</h3>
               <p className="text-gray-600 mb-4">
@@ -221,7 +225,7 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div style={{direction: 'rtl', textAlign: 'right'}} className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
@@ -242,7 +246,7 @@ function App() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div style={{direction: 'rtl', textAlign: 'right'}} className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
@@ -263,7 +267,7 @@ function App() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div style={{direction: 'rtl', textAlign: 'right'}} className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
@@ -299,42 +303,37 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">פרטי התקשרות</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6" style={{direction: 'rtl', textAlign: 'right'}}>פרטי התקשרות</h3>
               
-              <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-lg" style={{backgroundColor: '#153969', opacity: 0.1}}>
-                  <Phone className="h-6 w-6" style={{color: '#153969'}} />
+              <div style={{direction: 'rtl', textAlign: 'right'}} className="flex items-center space-x-4">
+                <div className="p-3 ml-4 rounded-lg" style={{backgroundColor: '#153969', opacity: 0.1}}>
+                  <Phone className="h-6 w-6 text-[#153969] fill-current" />
                 </div>
-                <div className="mr-4">
+                <div style={{direction: 'rtl', textAlign: 'right'}} className="ml-4">
                   <h4 className="font-semibold text-gray-900">טלפון</h4>
-                  <p className="text-gray-600">050-123-4567</p>
+                  <p className="text-gray-600">058-3212077</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-lg" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
-                  <Mail className="h-6 w-6" style={{color: '#FF66C4'}} />
+              <div style={{direction: 'rtl', textAlign: 'right'}} className="flex items-center space-x-4">
+                <div className="p-3 ml-4 rounded-lg" style={{backgroundColor: '#FF66C4', opacity: 0.1}}>
+                  <Mail className="h-6 w-6 text-[#FF66C4] fill-current" />
                 </div>
-                <div className="mr-4">
+                <div className="ml-4">
                   <h4 className="font-semibold text-gray-900">אימייל</h4>
-                  <p className="text-gray-600">info@auto-max.co.il</p>
+                  <p className="text-gray-600">automax3212@gmail.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-lg" style={{backgroundColor: '#153969', opacity: 0.1}}>
-                  <MapPin className="h-6 w-6" style={{color: '#153969'}} />
-                </div>
-                <div className="mr-4">
-                  <h4 className="font-semibold text-gray-900">כתובת</h4>
-                  <p className="text-gray-600">תל אביב, ישראל</p>
-                </div>
+              <div style={{direction: 'rtl', textAlign: 'right'}} className="flex items-center space-x-4">
+                           
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="p-8 rounded-xl" style={{background: 'linear-gradient(to bottom right, rgba(255, 102, 196, 0.1), rgba(21, 57, 105, 0.1))'}}>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            
+            <div className="p-8 rounded-xl" style={{ background: 'linear-gradient(to bottom right, rgba(255, 102, 196, 0.1), rgba(21, 57, 105, 0.1))' }}>
+              <form style={{direction: 'rtl', textAlign: 'right'}} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -346,8 +345,7 @@ function App() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
-                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF66C4] focus:border-[#FF66C4] transition-all"
                       required
                     />
                   </div>
@@ -361,8 +359,7 @@ function App() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
-                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF66C4] focus:border-[#FF66C4] transition-all"
                       required
                     />
                   </div>
@@ -379,8 +376,7 @@ function App() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
-                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF66C4] focus:border-[#FF66C4] transition-all"
                     />
                   </div>
                   <div>
@@ -393,8 +389,7 @@ function App() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all"
-                      style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF66C4] focus:border-[#FF66C4] transition-all"
                     />
                   </div>
                 </div>
@@ -409,19 +404,18 @@ function App() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 transition-all resize-none"
-                    style={{'&:focus': {ringColor: '#FF66C4', borderColor: '#FF66C4'}}}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF66C4] focus:border-[#FF66C4] transition-all resize-none"
                     placeholder="ספרו לנו על העסק שלכם והאתגרים שאתם מתמודדים איתם..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full text-white py-4 px-6 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  style={{background: `linear-gradient(to right, #FF66C4, #153969)`, '&:hover': {opacity: 0.9}}}
+                  className="w-full text-white py-4 px-6 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:opacity-90 shadow-lg"
+                  style={{ background: 'linear-gradient(to right, #FF66C4, #153969)' }}
                 >
                   שלח פנייה
-                  <ArrowRight className="inline h-5 w-5 mr-2" />
+                  <ArrowLeft className="inline h-5 w-5 mr-2" />
                 </button>
               </form>
             </div>
@@ -430,12 +424,12 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer style={{direction: 'rtl', textAlign: 'right'}} className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-gray-300 p-2 rounded-lg">
+                <div className="bg-gray-300 p-2 ml-4 rounded-lg">
                   <img src="/image (2).png" alt="Auto Max Logo" className="h-6 w-6" />
                 </div>
                 <div>
@@ -461,9 +455,8 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">צור קשר</h4>
               <div className="space-y-2 text-gray-400">
-                <p>050-123-4567</p>
-                <p>info@auto-max.co.il</p>
-                <p>תל אביב, ישראל</p>
+                <p>058-3212077</p>
+                <p>automax3212@gmail.com</p>
               </div>
             </div>
           </div>
