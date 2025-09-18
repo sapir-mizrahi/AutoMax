@@ -51,7 +51,7 @@ function App() {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="bg-gray-300 p-2 rounded-lg">
-                <img src="/image (2).png" alt="Auto Max Logo" className="h-8 w-8" />
+                <img src="./image (2).png" alt="Auto Max Logo" className="h-8 w-8" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Auto Max</h1>
@@ -430,7 +430,7 @@ function App() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="bg-gray-300 p-2 ml-4 rounded-lg">
-                  <img src="/image (2).png" alt="Auto Max Logo" className="h-6 w-6" />
+                  <img src="./image (2).png" alt="Auto Max Logo" className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Auto Max</h3>
