@@ -239,8 +239,8 @@ function App() {
                   ח.כ
                 </div>
                 <div className="mr-4">
-                  <h4 className="font-bold text-gray-900">חברת כהן ושותפים</h4>
-                  <p className="text-sm text-gray-500">שירותי ייעוץ עסקי</p>
+                  <h4 className="font-bold text-gray-900">זכיתי</h4>
+                  <p className="text-sm text-gray-500">חברה למימוש זכויות</p>
                 </div>
               </div>
             </div>
