@@ -233,7 +233,9 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "Auto Max שינתה לנו את המשחק לחלוטין. המערכת שבנו עזרה לנו להגדיל את המכירות ב-40% תוך שלושה חודשים."
+                " ,ספיר הכירה והתאימה לנו את התוכנה המדהימה הזו, אוריגמי,
+הסדר, הארגון והשקט הנפשי שנהיה לנו בעסק - שווה הכול!
+איזו אדיבות ,איזו מקצועיות,איזו שירותיות , וואוו, נהנינו מהתהליך ומהתוצאה ברמות!"
               </p>
               <div className="flex items-center">
                 <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundColor: '#153969'}}>
