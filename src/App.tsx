@@ -235,7 +235,7 @@ function App() {
               <p className="text-gray-600 mb-6 italic">
                 " ,ספיר הכירה והתאימה לנו את התוכנה המדהימה הזו, אוריגמי,
 הסדר, הארגון והשקט הנפשי שנהיה לנו בעסק - שווה הכול!
-איזו אדיבות ,איזו מקצועיות,איזו שירותיות , וואוו, נהנינו מהתהליך ומהתוצאה ברמות!"
+איזו אדיבות ,איזו מקצועיות,איזו שירותיות , וואוו, נהנינו מהתהליך ומהתוצאה ברמות!" 
               </p>
               <div className="flex items-center">
                 <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundImage: '#153969'}}>
