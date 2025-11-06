@@ -238,12 +238,12 @@ function App() {
 איזו אדיבות ,איזו מקצועיות,איזו שירותיות , וואוו, נהנינו מהתהליך ומהתוצאה ברמות!"
               </p>
               <div className="flex items-center">
-                <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundColor: '#153969'}}>
+                <div className="rounded-full w-12 h-12 flex items-center justify-center text-white font-bold" style={{backgroundImage: '#153969'}}>
                   ח.כ
                 </div>
                 <div className="mr-4">
-                  <h4 className="font-bold text-gray-900">זכיתי</h4>
-                  <p className="text-sm text-gray-500">חברה למימוש זכויות</p>
+                  <h4 className="font-bold text-gray-900">הום פיקס</h4>
+                  <p className="text-sm text-gray-500">ניהול ועדי בתים </p>
                 </div>
               </div>
             </div>
